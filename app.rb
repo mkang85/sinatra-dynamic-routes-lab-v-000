@@ -12,17 +12,28 @@ class App < Sinatra::Base
     "#{@square}"
   end
 
+  # get '/say/:number/:phrase' do
+  #   answer = ''
+  #   @number = params[:number].to_i
+  #   @phrase = params[:phrase]
+  #   i = 0
+  #   while i < @number
+  #   answer += @phrase
+  #   i++
+  #   end
+  #   answer
+  # end
+
   get '/say/:number/:phrase' do
-    answer = ''
-    @number = params[:number].to_i
-    @phrase = params[:phrase]
-    i = 0
-    while i < @number
-    answer += @phrase
-    i++
-    end
-    answer
+  answer = ''
+
+  params[:number].to_i.times do
+    answer += params[:phrase]
   end
+
+  answer
+end
+
 
 #   get '/say/:word1/:word2/:word3/:word4/:word5'
 #   @string = [params[:word1], params[:word2], params[:word3], params[:word4], params[:word5]].join(' ')
