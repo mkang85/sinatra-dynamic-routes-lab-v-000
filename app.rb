@@ -18,7 +18,6 @@ class App < Sinatra::Base
     i = 0;
     while i < @number
     puts @phrase
-    end
     i++
   end
 
