@@ -18,8 +18,8 @@ class App < Sinatra::Base
     i = 0;
     while i < @number
     puts  @phrase
-      i++
     end
+    i++
   end
 
 #'/say/:number/:phrase' that accepts a number and a phrase and returns that phrase in a string the number of times given.
