@@ -36,9 +36,9 @@ class App < Sinatra::Base
 
 
 
-#   get '/say/:word1/:word2/:word3/:word4/:word5'
-#   @string = [params[:word1], params[:word2], params[:word3], params[:word4], params[:word5]].join(' ')
-#   end
+  get '/say/:word1/:word2/:word3/:word4/:word5'
+  @string = [params[:word1], params[:word2], params[:word3], params[:word4], params[:word5]].join(' ')
+  end
 #
 # get '/:operation/:number1/:number2'
 #   @operation = params[:operation]
