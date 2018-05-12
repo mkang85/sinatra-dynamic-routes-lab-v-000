@@ -26,9 +26,10 @@ class App < Sinatra::Base
 
   get '/say/:number/:phrase' do
   answer = ''
+  i = 0
   while i < params[:number].to_i
-  params[:number].to_i.times do
     answer += params[:phrase]
+    i++
   end
 
   answer
